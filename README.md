@@ -28,8 +28,17 @@ I'm keeping the project layout as flat as possible until it makes sense not to. 
 
 To get started developing, all you need at this moment is Go, and Twitch API credentials.
 
+`make run` is all you need to run the project. `make tidy` will run go mod tidy & go mod vendor.
+
 To get running with docker-compose, you'll first need to build the image locally.
 
 `make create && make up`
 
 You can spin everything down by running `make down`
+
+#### TODO
+
+1. Top priority is wiring up the config variables. I'm using flags, but a config file can be used for API credentials. Wrapping my brain around that now...
+2. Implement database
+3. ...more to come
+
