@@ -5,7 +5,7 @@
 
 #### Project Overview
 
-This is a project aimed improving my skills in both Go and JavaScript. The frontend is built with Next.js (react) that talks to a Go API.
+This is a project aimed improving my skills in both Go and JavaScript. The frontend is built with Next.js (react) that talks to a Go API. Be sure to look at the [frontend](https://github.com/jonleopard/dankstats-frontend)
 
 
 The backend is a simple wrapper for [Helix](https://github.com/nicklaw5/helix). Provided you have twitch api credentials, Helix will take those and will authorize your app by [retrieving](https://github.com/nicklaw5/helix/blob/main/docs/authentication_docs.md#authentication-documentation) an AppAccessToken. This token refreshes every 60 days and thats something I need to account for. Ideally the token get refreshed and swapped out automatically without service interuption. 
@@ -19,6 +19,7 @@ My initial thought was to simply wrap the Helix methods in an API handler and ex
 So what I have to do now is think of a way to proxy requests so that users can hit my API as much as they want, without it affecting my API access to Twitch. This also means that API requests are going to retrieve data from my database, rather than straight from the twitch api. 
 
 Twitch does not provide any historical data, so any charting is impossible unless I start archiving the data myself. This means I need to setup a database and try to mock data based on their API. I need to figure out what data I want to collect. Lastly, how does this collection/scanning happen? What triggers it? How often? Being at my level in Go, this seems quite complicated but I am determined to figure it out.
+
 
 #### Project structure
 
